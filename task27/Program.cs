@@ -7,11 +7,12 @@ Console.Write("Введите число N: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
 
+if (numberN < 0) numberN *= -1;
 int SumDigitN = 0;
-while (numberN / 1 > 0)
+while (numberN / 1 != 0)
 {
-    SumDigitN = SumDigitN + (numberN % 10);
-    numberN = numberN / 10;
+    SumDigitN += (numberN % 10);
+    numberN /= 10;
 }
 
 Console.WriteLine($"Сумма цифр в числе = {SumDigitN}");
